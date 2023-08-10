@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+#top-menu a{
+	text-decoration:none;
+	
+}
+
+
+#top-menu .caku {
+	font-size: 20px;
+	color: #000000;
+}
+
+#top-menu .hira {
+	font-size: 30px;
+	color: #42703f;
+}
+
