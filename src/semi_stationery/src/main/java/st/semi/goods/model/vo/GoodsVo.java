@@ -1,4 +1,4 @@
-package goods.model.vo;
+package st.semi.goods.model.vo;
 
 public class GoodsVo {
 //	GOID NOT NULL VARCHAR2(20) 

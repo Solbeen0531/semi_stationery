@@ -1,4 +1,4 @@
-package member.model.vo;
+package st.semi.member.model.vo;
 
 public class MemberVo {
 //	MID      NOT NULL VARCHAR2(20)   

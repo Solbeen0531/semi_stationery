@@ -1,4 +1,4 @@
-package member.controller;
+package st.semi.member.join.controller;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
