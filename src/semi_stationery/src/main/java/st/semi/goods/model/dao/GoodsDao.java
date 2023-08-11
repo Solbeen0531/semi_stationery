@@ -20,7 +20,8 @@ public class GoodsDao {
 //		GOTY    NOT NULL NUMBER(2)
 		List<GoodsVo> result = new ArrayList<GoodsVo>();
 		
-		String query = "SELECT GOID, GONM, GOPRICE, GOIMG, GOTY, GOTYNAME FROM GOODS WHERE GOTY = ?";
+		String query = "SELECT GOID,GONM, GOPRICE, GOIMG, GOTY, GT.GOTYNAME\r\n"
+				+ " FROM GOODS G JOIN GOTYPE GT USING(GOTY) WHERE GOTY = ?";
 		PreparedStatement pstmt = null;
 		ResultSet rset = null;
 		
