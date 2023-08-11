@@ -1,22 +1,32 @@
 package st.semi.goods.model.vo;
 
 public class GoodsVo {
-//	GOID NOT NULL VARCHAR2(20) 
-//	GONM NOT NULL VARCHAR2(50) 
-//	GOTY          VARCHAR2(20)
+//	GOID    NOT NULL VARCHAR2(20)  
+//	GONM    NOT NULL VARCHAR2(50)  
+//	GOPRICE NOT NULL NUMBER        
+//	GOIMG   NOT NULL VARCHAR2(100) 
+//	GOTY    NOT NULL NUMBER(2)
 	private String goId;
 	private String goNm;
-	private String goTy;
+	private int goPrice;
+	private String goImg;
+	private int goTy;
 	
+	private String goTyName;
+
 	@Override
 	public String toString() {
-		return "GoodsVo [goId=" + goId + ", goNm=" + goNm + ", goTy=" + goTy + "]";
+		return "GoodsVo [goId=" + goId + ", goNm=" + goNm + ", goPrice=" + goPrice + ", goImg=" + goImg + ", goTy="
+				+ goTy + ", goTyName=" + goTyName + "]";
 	}
 
-	public GoodsVo(String goId, String goNm, String goTy) {
+	public GoodsVo(String goId, String goNm, int goPrice, String goImg, int goTy, String goTyName) {
 		this.goId = goId;
 		this.goNm = goNm;
+		this.goPrice = goPrice;
+		this.goImg = goImg;
 		this.goTy = goTy;
+		this.goTyName = goTyName;
 	}
 
 	public GoodsVo() {
@@ -39,12 +49,36 @@ public class GoodsVo {
 		this.goNm = goNm;
 	}
 
-	public String getGoTy() {
+	public int getGoPrice() {
+		return goPrice;
+	}
+
+	public void setGoPrice(int goPrice) {
+		this.goPrice = goPrice;
+	}
+
+	public String getGoImg() {
+		return goImg;
+	}
+
+	public void setGoImg(String goImg) {
+		this.goImg = goImg;
+	}
+
+	public int getGoTy() {
 		return goTy;
 	}
 
-	public void setGoTy(String goTy) {
+	public void setGoTy(int goTy) {
 		this.goTy = goTy;
+	}
+
+	public String getGoTyName() {
+		return goTyName;
+	}
+
+	public void setGoTyName(String goTyName) {
+		this.goTyName = goTyName;
 	}
 	
 	
