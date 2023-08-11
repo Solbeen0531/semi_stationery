@@ -5,9 +5,11 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet"
+	href="<%=request.getContextPath()%>/resources/css/footer.css">
+<link rel="stylesheet"
 	href="<%=request.getContextPath()%>/resources/css/reset.css">
 <script src="/lesson/resources/js/jquery-3.7.0.js"></script>
-<title>index</title>
+<title>솔빈문구</title>
 </head>
 <body>
 	
@@ -32,9 +34,8 @@
 
 	</div>
 
-	<div>
-		<!-- 첫 화면 -->
-
-	</div>
+	<footer>
+	
+	</footer>
 </body>
 </html>

@@ -11,37 +11,37 @@
 <title>header</title>
 </head>
 <body>
-<div id="top-menu">
+<div id="menu">
 	<ul>
-	<li class="hira">
-		<a href="${pageContext.request.contextPath }/">솔빈문구</a>
+	<li class="top-menu">
+		<a href="${pageContext.request.contextPath }/" class="top-menu-link">ㅅㅂ문구</a>
 	</li>
-	<li class="hira">
-		<a href="${pageContext.request.contextPath }/shop">Shop</a>
-		<div class="caku">
+	<li class="top-menu">
+		<a href="${pageContext.request.contextPath }/shop" class="top-menu-link">Shop</a>
+		<div class="sub-menu">
 			<ul>
-				<li><a href="${pageContext.request.contextPath }/shop">전체상품</a></li>
-				<li><a href="${pageContext.request.contextPath }/shop/lifestyle">생활용품</a></li>
-				<li><a href="${pageContext.request.contextPath }/shop/letters">편지지</a></li>
+				<li><a href="${pageContext.request.contextPath }/shop" class="sub-menu-link">전체상품</a></li>
+				<li><a href="${pageContext.request.contextPath }/shop/lifestyle" class="sub-menu-link">생활용품</a></li>
+				<li><a href="${pageContext.request.contextPath }/shop/letters" class="sub-menu-link">편지지</a></li>
 			</ul>
 		</div>
 	</li>
-	<li class="hira">
-		<a href="${pageContext.request.contextPath }/notice">공지사항</a>
+	<li class="top-menu">
+		<a href="${pageContext.request.contextPath }/notice" class="top-menu-link">공지사항</a>
 	</li>
 	<li>
 	</li>
-	<li class="hira">
-		<a href="${pageContext.request.contextPath }/login">Login</a>
-		<div class="caku">
+	<li class="top-menu">
+		<a href="${pageContext.request.contextPath }/login" class="top-menu-link">Login</a>
+		<div class="sub-menu">
 			<ul>
-				<li><a href="${pageContext.request.contextPath }/join">Join</a></li>
-				<li><a href="${pageContext.request.contextPath }/login">Login</a></li>
+				<li><a href="${pageContext.request.contextPath }/join" class="sub-menu-link">Join</a></li>
+				<li><a href="${pageContext.request.contextPath }/login" class="sub-menu-link">Login</a></li>
 			</ul>
 		</div>
 	</li>
-	<li class="hira">
-		<a href="${pageContext.request.contextPath }/cart">Cart</a>
+	<li class="top-menu">
+		<a href="${pageContext.request.contextPath }/cart" class="top-menu-link">Cart</a>
 	</li>
 	</ul>
 </div>
