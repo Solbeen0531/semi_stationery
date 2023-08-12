@@ -10,18 +10,23 @@
 	href="<%=request.getContextPath()%>/resources/css/reset.css">
 <script src="/lesson/resources/js/jquery-3.7.0.js"></script>
 <title>솔빈문구</title>
+
 </head>
 <body>
 	
 	<header>
 		<!-- 헤더 -->
 		<%@include file="/WEB-INF/view/header.jsp"%>
-
 	</header>
 
-	<div class="main1">
+	<div>
 		<!-- 첫 화면 -->
-
+		<%@include file="/WEB-INF/view/main1.jsp"%>
+		
+		<form action="${pageContext.request.contextPath }/shop/one" method="get">
+		<input type="text" name="goTy" placeholder="test">
+		<button type="submit">테스트</button>
+		</form>
 	</div>
 
 	<div>

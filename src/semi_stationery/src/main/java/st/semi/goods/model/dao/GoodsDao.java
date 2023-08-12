@@ -37,8 +37,7 @@ public class GoodsDao {
 						rset.getString("GONM"),
 						rset.getInt("GOPRICE"),
 						rset.getString("GOIMG"),
-						rset.getInt("GOTY"),
-						rset.getString("GOTYNAME")
+						rset.getInt("GOTY")
 						);
 				result.add(gvo);
 				
@@ -57,8 +56,9 @@ public class GoodsDao {
 	public GoodsVo selectOne(Connection conn, int goTy) {
 		GoodsVo result = null;
 
-		String query = "SELECT GOID,GONM, GOPRICE, GOIMG, GOTY, GT.GOTYNAME\r\n"
-				+ " FROM GOODS G JOIN GOTYPE GT USING(GOTY) WHERE GOTY = ?";
+		String query = "SELECT GONM, GOPRICE, GOIMG, GOTY\r\n"
+				+ " FROM GOODS \r\n"
+				+ " WHERE GOTY = ?";
 		PreparedStatement pstmt = null;
 		ResultSet rset = null;
 		try {
@@ -70,8 +70,7 @@ public class GoodsDao {
 						rset.getString("GONM"),
 						rset.getInt("GOPRICE"),
 						rset.getString("GOIMG"),
-						rset.getInt("GOTY"),
-						rset.getString("GOTYNAME"));
+						rset.getInt("GOTY"));
 				
 			}
 		} catch (SQLException e) {

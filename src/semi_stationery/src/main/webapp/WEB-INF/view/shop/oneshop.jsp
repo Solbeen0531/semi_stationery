@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,20 +7,29 @@
 <title>솔빈문구</title>
 </head>
 <body>
-<h2>상품 정보</h2>
+	<h2>상품 하나만 보기</h2>
 	<table border="1">
 		<tr>
-			<td>회원번호</td>
-			<td>회원아이디</td>
-			<td>회원이름</td>
-			<td>회원나이</td>
+			<td colspan="2">상품이미지</td>
+
 		</tr>
 		<tr>
-			<td>${udto.userNo }</td>
-			<td>${udto.userId }</td>
-			<td>${udto.userName }</td>
-			<td>${udto.userAge }</td>
+			<td>상품이름</td>
+			<td>상품가격</td>
 		</tr>
+
+	</table>
+	<hr>
+	<table border="1">
+		<tr>
+			<td colspan="2"> ${goTy.goImg }</td>
+
+		</tr>
+		<tr>
+			<td> ${goTy.goNm }</td>
+			<td> ${goTy.goPrice }</td>
+		</tr>
+
 	</table>
 </body>
 </html>

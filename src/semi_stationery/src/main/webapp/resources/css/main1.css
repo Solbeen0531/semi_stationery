@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+#main1 {
+	height: 50%; /* 메인1의 전체 높이 설정 */
+	width: 100%; /* 메인1의 전체 너비 설정 */
+}
+
+#main1 table {
+	background-color: #FF90FF; /* 배경 색을 설정 */
+	float: left; /* 왼쪽으로 나열되도록 설정 */
+	position: relative; /* 해당 table 태그 내부의 top/left 포지션 초기화 */
+	height: 50%;
+	width: 100%;
+}
+

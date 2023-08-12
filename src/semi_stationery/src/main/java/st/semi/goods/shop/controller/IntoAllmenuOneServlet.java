@@ -17,7 +17,8 @@ public class IntoAllmenuOneServlet extends HttpServlet {
     private GoodsService service = new GoodsService();
 	
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-    	String goTyStr = request.getParameter("goTy");
+    	
+		String goTyStr = request.getParameter("goTy");
 		int goTy = 0;
 		try {
 			goTy = Integer.parseInt(goTyStr);
@@ -30,7 +31,7 @@ public class IntoAllmenuOneServlet extends HttpServlet {
 			request.setAttribute("gvo", result);
 			request.getRequestDispatcher("/WEB-INF/view/shop/oneshop.jsp").forward(request, response);
 		} else {
-			request.getRequestDispatcher("/WEB-INF/views/searchFail.jsp").forward(request, response);
+			request.getRequestDispatcher("/WEB-INF/view/searchFail.jsp").forward(request, response);
 		}
 	}
 

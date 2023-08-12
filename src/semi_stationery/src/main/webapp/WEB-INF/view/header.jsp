@@ -17,7 +17,7 @@
 		<a href="${pageContext.request.contextPath }/" class="top-menu-link">ㅅㅂ문구</a>
 	</li>
 	<li class="top-menu">
-		<a href="${pageContext.request.contextPath }/shop" class="top-menu-link">Shop</a>
+		<a href="${pageContext.request.contextPath }/shop/one" class="top-menu-link">Shop</a>
 		<div class="sub-menu">
 			<ul>
 				<li><a href="${pageContext.request.contextPath }/shop" class="sub-menu-link">전체상품</a></li>

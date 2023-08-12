@@ -4,12 +4,17 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet"
+	href="<%=request.getContextPath()%>/resources/css/main1.css">
 <title>솔빈문구</title>
 </head>
 <body>
-	<h2>해당 메뉴가 없습니다.</h2>
-	<form action="${pageContext.request.contextPath }/" method="get">
-		<button type="submit">메인 페이지로 돌아가기</button>
-	</form>
+	<div id="main1">
+		<table border="1">
+			<tr>
+				<td>상품이미지</td>
+			</tr>
+		</table>
+	</div>
 </body>
 </html>
