@@ -18,17 +18,18 @@ public class IntoAllmenuOneServlet extends HttpServlet {
 	
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     	
-		String goTyStr = request.getParameter("goTy");
-		int goTy = 0;
-		try {
-			goTy = Integer.parseInt(goTyStr);
-		} catch (NumberFormatException e) {
-			e.printStackTrace();
-		}
-		GoodsVo result = service.selectOne(goTy);
-
+		String goId= request.getParameter("goId");
+//		int goTy = 0;
+//		try {
+//			goTy = Integer.parseInt(goTyStr);
+//		} catch (NumberFormatException e) {
+//			e.printStackTrace();
+//		}
+		System.out.println("[SB1S]"+goId);
+		GoodsVo result = service.selectOne(goId);
+		System.out.println("[SB2S]"+result);
 		if (result != null) {
-			request.setAttribute("gvo", result);
+			request.setAttribute("gid", result);
 			request.getRequestDispatcher("/WEB-INF/view/shop/oneshop.jsp").forward(request, response);
 		} else {
 			request.getRequestDispatcher("/WEB-INF/view/searchFail.jsp").forward(request, response);

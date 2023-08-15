@@ -22,12 +22,12 @@
 	<hr>
 	<table border="1">
 		<tr>
-			<td colspan="2"> ${goTy.goImg }</td>
+			<td colspan="2"> ${gid.goImg }</td>
 
 		</tr>
 		<tr>
-			<td> ${goTy.goNm }</td>
-			<td> ${goTy.goPrice }</td>
+			<td> ${gid.goNm }</td>
+			<td> ${gid.goPrice }</td>
 		</tr>
 
 	</table>

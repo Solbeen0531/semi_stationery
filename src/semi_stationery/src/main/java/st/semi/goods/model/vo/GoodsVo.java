@@ -11,11 +11,13 @@ public class GoodsVo {
 	private int goPrice;
 	private String goImg;
 	private int goTy;
+
 	@Override
 	public String toString() {
 		return "GoodsVo [goId=" + goId + ", goNm=" + goNm + ", goPrice=" + goPrice + ", goImg=" + goImg + ", goTy="
 				+ goTy + "]";
 	}
+
 	public GoodsVo(String goId, String goNm, int goPrice, String goImg, int goTy) {
 		this.goId = goId;
 		this.goNm = goNm;
@@ -23,40 +25,49 @@ public class GoodsVo {
 		this.goImg = goImg;
 		this.goTy = goTy;
 	}
+
 	public GoodsVo() {
 		super();
 	}
+
 	public String getGoId() {
 		return goId;
 	}
+
 	public void setGoId(String goId) {
 		this.goId = goId;
 	}
+
 	public String getGoNm() {
 		return goNm;
 	}
+
 	public void setGoNm(String goNm) {
 		this.goNm = goNm;
 	}
+
 	public int getGoPrice() {
 		return goPrice;
 	}
+
 	public void setGoPrice(int goPrice) {
 		this.goPrice = goPrice;
 	}
+
 	public String getGoImg() {
 		return goImg;
 	}
+
 	public void setGoImg(String goImg) {
 		this.goImg = goImg;
 	}
+
 	public int getGoTy() {
 		return goTy;
 	}
+
 	public void setGoTy(int goTy) {
 		this.goTy = goTy;
 	}
-	
 
-	
 }

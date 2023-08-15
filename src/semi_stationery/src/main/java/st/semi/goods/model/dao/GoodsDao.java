@@ -14,33 +14,28 @@ import st.semi.goods.model.vo.GoodsVo;
 public class GoodsDao {
 
 	// 상품 다건 조회
-	public List<GoodsVo> selectList(Connection conn,String goTyName){
+	public List<GoodsVo> selectList(Connection conn, String goTyName) {
 //		GOID    NOT NULL VARCHAR2(20)  
 //		GONM    NOT NULL VARCHAR2(50)  
 //		GOPRICE NOT NULL NUMBER        
 //		GOIMG   NOT NULL VARCHAR2(100) 
 //		GOTY    NOT NULL NUMBER(2)
 		List<GoodsVo> result = new ArrayList<GoodsVo>();
-		
+
 		String query = "SELECT GOID,GONM, GOPRICE, GOIMG, GOTY, GT.GOTYNAME\r\n"
 				+ " FROM GOODS G JOIN GOTYPE GT USING(GOTY) WHERE GOTY = ?";
 		PreparedStatement pstmt = null;
 		ResultSet rset = null;
-		
+
 		try {
 			pstmt = conn.prepareStatement(query);
 			rset = pstmt.executeQuery();
-			
-			while(rset.next() == true) {
-				GoodsVo gvo = new GoodsVo(
-						rset.getString("GOID"),
-						rset.getString("GONM"),
-						rset.getInt("GOPRICE"),
-						rset.getString("GOIMG"),
-						rset.getInt("GOTY")
-						);
+
+			while (rset.next() == true) {
+				GoodsVo gvo = new GoodsVo(rset.getString("GOID"), rset.getString("GONM"), rset.getInt("GOPRICE"),
+						rset.getString("GOIMG"), rset.getInt("GOTY"));
 				result.add(gvo);
-				
+
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -48,38 +43,36 @@ public class GoodsDao {
 			JdbcTemplate.close(rset);
 			JdbcTemplate.close(pstmt);
 		}
-		
-		return result;		
+
+		return result;
 	}
-	
+
 	// 상품 1건 조회
-	public GoodsVo selectOne(Connection conn, int goTy) {
+	public GoodsVo selectOne(Connection conn, String goId) {
 		GoodsVo result = null;
 
-		String query = "SELECT GONM, GOPRICE, GOIMG, GOTY\r\n"
-				+ " FROM GOODS \r\n"
-				+ " WHERE GOTY = ?";
+		String query = "SELECT GOID, GONM, GOPRICE, GOIMG, GOTY "
+				+ " FROM GOODS "
+				+ " WHERE = ?";
 		PreparedStatement pstmt = null;
 		ResultSet rset = null;
 		try {
 			pstmt = conn.prepareStatement(query);
-			pstmt.setInt(1, goTy);
+			pstmt.setString(1, goId);
 			rset = pstmt.executeQuery();
-			if(rset.next()) {
-				result=new GoodsVo(rset.getString("GOID"),
-						rset.getString("GONM"),
-						rset.getInt("GOPRICE"),
-						rset.getString("GOIMG"),
-						rset.getInt("GOTY"));
-				
+			if (rset.next()) {
+
+				result = new GoodsVo(rset.getString("GOID"), rset.getString("GONM"), rset.getInt("GOPRICE"),
+						rset.getString("GOIMG"), rset.getInt("GOTY"));
 			}
+			
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
 			JdbcTemplate.close(rset);
 			JdbcTemplate.close(pstmt);
 		}
-
+		System.out.println("/"+result+"[SB1D]");
 		return result;
 	}
 }

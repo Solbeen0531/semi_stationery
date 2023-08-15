@@ -21,10 +21,10 @@ public class GoodsService {
 	}
 	
 	// 상품 1건 조회
-	public GoodsVo selectOne(int goTy) {
+	public GoodsVo selectOne(String goId) {
 		GoodsVo result = null;
 		Connection conn = JdbcTemplate.getConnection();
-		result = dao.selectOne(conn, goTy);
+		result = dao.selectOne(conn, goId);
 		JdbcTemplate.close(conn);
 		return result;
 
