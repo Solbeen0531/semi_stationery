@@ -1,2 +1,10 @@
-# semi_stationery
-Semi Project - Solbeen's Stationery (세미 - 문구)
+# 세미 프로젝트 - 솔빈 문구
+## Contents
+1. 개발 배경과 목표
+2. 개발 환경
+3. 주요 기능
+4. 산출물
+5. 최종발표자료(Google Drive)
+
+## ① 개발 배경과 목표
+
