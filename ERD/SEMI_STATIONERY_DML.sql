@@ -21,9 +21,9 @@ INSERT INTO GOTYPE
 COMMIT;
 -----------------------------
 INSERT INTO GOODS
- VALUES('AL_LT001','솔빈편지지',4000,'상품 이미지',1);
+ VALUES('AL_LT001','솔빈편지지',4000,'상품이미지',1);
 INSERT INTO GOODS
- VALUES('AL_LS001','솔빈발판',6000,'상품 이미지',0);
+ VALUES('AL_LS001','솔빈발판',6000,'상품이미지',0);
 COMMIT;
 -----------------------------
 --INSERT INTO "BY_GOODS"

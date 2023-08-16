@@ -17,12 +17,10 @@
 				href="${pageContext.request.contextPath }/" class="top-menu-link">솔빈문구</a>
 			</li>
 			<li class="top-menu"><a
-				href="${pageContext.request.contextPath }/shop/one"
+				href="${pageContext.request.contextPath }/shop"
 				class="top-menu-link">Shop</a>
 				<div class="sub-menu">
 					<ul>
-						<li><a href="${pageContext.request.contextPath }/shop/one"
-							class="sub-menu-link">상품하나</a></li>
 						<li><a href="${pageContext.request.contextPath }/shop"
 							class="sub-menu-link">전체상품</a></li>
 						<li><a

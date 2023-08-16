@@ -14,7 +14,7 @@ import st.semi.goods.model.vo.GoodsVo;
 public class GoodsDao {
 
 	// 상품 다건 조회
-	public List<GoodsVo> selectList(Connection conn, String goTyName) {
+	public List<GoodsVo> selectList(Connection conn) {
 //		GOID    NOT NULL VARCHAR2(20)  
 //		GONM    NOT NULL VARCHAR2(50)  
 //		GOPRICE NOT NULL NUMBER        
@@ -22,8 +22,8 @@ public class GoodsDao {
 //		GOTY    NOT NULL NUMBER(2)
 		List<GoodsVo> result = new ArrayList<GoodsVo>();
 
-		String query = "SELECT GOID,GONM, GOPRICE, GOIMG, GOTY, GT.GOTYNAME\r\n"
-				+ " FROM GOODS G JOIN GOTYPE GT USING(GOTY) WHERE GOTY = ?";
+		String query = "SELECT GOID,GONM, GOPRICE, GOIMG, GOTY "
+				+ " FROM GOODS ";
 		PreparedStatement pstmt = null;
 		ResultSet rset = null;
 
@@ -49,11 +49,12 @@ public class GoodsDao {
 
 	// 상품 1건 조회
 	public GoodsVo selectOne(Connection conn, String goId) {
+		System.out.println("[selectOne] goId: "+goId);
 		GoodsVo result = null;
 
 		String query = "SELECT GOID, GONM, GOPRICE, GOIMG, GOTY "
 				+ " FROM GOODS "
-				+ " WHERE = ?";
+				+ " WHERE GOID = ?";
 		PreparedStatement pstmt = null;
 		ResultSet rset = null;
 		try {
