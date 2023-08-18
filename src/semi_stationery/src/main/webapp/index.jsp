@@ -13,7 +13,7 @@
 
 </head>
 <body>
-	
+
 	<header>
 		<!-- 헤더 -->
 		<%@include file="/WEB-INF/view/header.jsp"%>
@@ -22,11 +22,8 @@
 	<div>
 		<!-- 첫 화면 -->
 		<%@include file="/WEB-INF/view/main1.jsp"%>
-		
-		<form action="${pageContext.request.contextPath }/shop/one" method="get">
-		<input type="text" name="goTy" placeholder="test">
-		<button type="submit">테스트</button>
-		</form>
+
+
 	</div>
 
 	<div>
@@ -39,8 +36,6 @@
 
 	</div>
 
-	<footer>
-	
-	</footer>
+	<footer> </footer>
 </body>
 </html>

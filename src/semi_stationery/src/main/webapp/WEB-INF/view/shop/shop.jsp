@@ -9,6 +9,13 @@
 </head>
 <body>
 	<h1>전체 상품</h1>
+	
+	<div>
+	<form>
+	
+	</form>
+	</div>
+	
 	<div>
 		<table border="1">
 			<tr>
@@ -19,7 +26,7 @@
 			<c:forEach items="${goodslist }" var="item">
 				<tr>
 					<td>${item.goImg }</td>
-					<td>${item.goNm }</td>
+					<td><a href="<%=request.getContextPath()%>/intodetail?goId=${item.goId}">${item.goNm }</a></td>
 					<td>${item.goPrice }</td>
 				</tr>
 			</c:forEach>

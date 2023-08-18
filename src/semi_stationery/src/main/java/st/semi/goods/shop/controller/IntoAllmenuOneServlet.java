@@ -25,9 +25,9 @@ public class IntoAllmenuOneServlet extends HttpServlet {
 //		} catch (NumberFormatException e) {
 //			e.printStackTrace();
 //		}
-		System.out.println("[SB1S]"+goId);
+//		System.out.println("[SB1S]"+goId);
 		GoodsVo result = service.selectOne(goId);
-		System.out.println("[SB2S]"+result);
+//		System.out.println("[SB2S]"+result);
 		if (result != null) {
 			request.setAttribute("gid", result);
 			request.getRequestDispatcher("/WEB-INF/view/shop/oneshop.jsp").forward(request, response);
